@@ -1,0 +1,124 @@
+[![Build Status](https://travis-ci.org/reneeb/Mojolicious-Command-generate-localplugin.svg?branch=master)](https://travis-ci.org/reneeb/Mojolicious-Command-generate-localplugin)
+[![Kwalitee status](http://cpants.cpanauthors.org/dist/Mojolicious-Command-generate-localplugin.png)](http://cpants.charsbar.org/dist/overview/Mojolicious-Command-generate-localplugin)
+[![GitHub issues](https://img.shields.io/github/issues/reneeb/Mojolicious-Command-generate-localplugin.svg)](https://github.com/reneeb/Mojolicious-Command-generate-localplugin/issues)
+
+# NAME
+
+Mojolicious::Command::generate::localplugin
+
+# VERSION
+
+version 0.01
+
+# SYNOPSIS
+
+    Usage: APPLICATION generate localplugin [OPTIONS] [NAME]
+
+      mojo generate localplugin
+      mojo generate localplugin TestPlugin
+
+    Options:
+      -h, --help   Show this summary of available options
+
+# DESCRIPTION
+
+[Mojolicious::Command::generate::localplugin](https://metacpan.org/pod/Mojolicious::Command::generate::localplugin) generates directory structures for
+fully functional [Mojolicious](https://metacpan.org/pod/Mojolicious) plugins.
+
+See ["COMMANDS" in Mojolicious::Commands](https://metacpan.org/pod/Mojolicious::Commands#COMMANDS) for a list of commands that are
+available by default.
+
+# NAME
+
+Mojolicious::Command::generate::localplugin - Plugin generator command
+
+# ATTRIBUTES
+
+[Mojolicious::Command::generate::localplugin](https://metacpan.org/pod/Mojolicious::Command::generate::localplugin) inherits all attributes from
+[Mojolicious::Command](https://metacpan.org/pod/Mojolicious::Command) and implements the following new ones.
+
+## description
+
+    my $description = $plugin->description;
+    $plugin         = $plugin->description('Foo');
+
+Short description of this command, used for the command list.
+
+## usage
+
+    my $usage = $plugin->usage;
+    $plugin   = $plugin->usage('Foo');
+
+Usage information for this command, used for the help screen.
+
+# METHODS
+
+[Mojolicious::Command::generate::plugin](https://metacpan.org/pod/Mojolicious::Command::generate::plugin) inherits all methods from
+[Mojolicious::Command](https://metacpan.org/pod/Mojolicious::Command) and implements the following new ones.
+
+## run
+
+    $plugin->run(@ARGV);
+
+Run this command.
+
+# SEE ALSO
+
+[Mojolicious](https://metacpan.org/pod/Mojolicious), [Mojolicious::Guides](https://metacpan.org/pod/Mojolicious::Guides), [http://mojolicious.org](http://mojolicious.org).
+
+
+
+## Development
+
+The distribution is contained in a Git repository, so simply clone the
+repository
+
+```
+$ git clone http://github.com/reneeb/Mojolicious-Command-generate-localplugin.git
+```
+
+and change into the newly-created directory.
+
+```
+$ cd Mojolicious-Command-generate-localplugin
+```
+
+The project uses [`Dist::Zilla`](https://metacpan.org/pod/Dist::Zilla) to
+build the distribution, hence this will need to be installed before
+continuing:
+
+```
+$ cpanm Dist::Zilla
+```
+
+To install the required prequisite packages, run the following set of
+commands:
+
+```
+$ dzil authordeps --missing | cpanm
+$ dzil listdeps --author --missing | cpanm
+```
+
+The distribution can be tested like so:
+
+```
+$ dzil test
+```
+
+To run the full set of tests (including author and release-process tests),
+add the `--author` and `--release` options:
+
+```
+$ dzil test --author --release
+```
+
+# AUTHOR
+
+Renee Baecker &lt;reneeb@cpan.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2018 by Renee Baecker.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
