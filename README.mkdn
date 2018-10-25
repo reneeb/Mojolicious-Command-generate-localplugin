@@ -4,11 +4,11 @@
 
 # NAME
 
-Mojolicious::Command::generate::localplugin
+Mojolicious::Command::Author::generate::localplugin
 
 # VERSION
 
-version 0.01
+version 0.02
 
 # SYNOPSIS
 
@@ -68,7 +68,7 @@ Run this command.
 
 
 
-## Development
+# Development
 
 The distribution is contained in a Git repository, so simply clone the
 repository
@@ -114,7 +114,7 @@ $ dzil test --author --release
 
 # AUTHOR
 
-Renee Baecker &lt;reneeb@cpan.org>
+Renee Baecker <reneeb@cpan.org>
 
 # COPYRIGHT AND LICENSE
 

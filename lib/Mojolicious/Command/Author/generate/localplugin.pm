@@ -1,10 +1,10 @@
-package Mojolicious::Command::generate::localplugin;
+package Mojolicious::Command::Author::generate::localplugin;
 use Mojo::Base 'Mojolicious::Command';
 
 use Mojo::Util qw(camelize class_to_path decamelize);
 use Mojolicious;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 has description => 'Generate Mojolicious plugin directory structure for application';
 has usage => sub { shift->extract_usage };
@@ -13,15 +13,20 @@ sub run {
   my ($self, $name) = @_;
   $name ||= 'MyPlugin';
 
+  my $use_hash = Mojolicious->VERSION() >= 8 ? 1 : 0;
+
   # Class
   my $class = $name =~ /^[a-z]/ ? camelize $name : $name;
   my $app = class_to_path $class;
-  $self->render_to_rel_file('class', "lib/$app", $class, $name);
+  my @app_params = $use_hash ? ({ class => $class, name => $name }) : ($class, $name);
+  $self->render_to_rel_file('class', "lib/$app", @app_params);
 
   # Test
   my $testname = decamelize $class;
-  $self->render_to_rel_file('test', "t/$testname.t", $name);
+  my @test_params = $use_hash ? ({ name => $name }) : ($name);
+  $self->render_to_rel_file('test', "t/$testname.t", @test_params);
 }
+
 
 1;
 
@@ -88,7 +93,6 @@ L<Mojolicious>, L<Mojolicious::Guides>, L<http://mojolicious.org>.
 __DATA__
 
 @@ class
-% my ($class, $name) = @_;
 package <%= $class %>;
 use Mojo::Base 'Mojolicious::Plugin';
 
@@ -137,7 +141,6 @@ L<Mojolicious>, L<Mojolicious::Guides>, L<http://mojolicious.org>.
 <% %>=cut
 
 @@ test
-% my $name = shift;
 use Mojo::Base -strict;
 
 use Test::More;
