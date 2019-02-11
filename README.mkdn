@@ -4,7 +4,7 @@
 
 # NAME
 
-Mojolicious::Command::Author::generate::localplugin
+Mojolicious::Command::Author::generate::localplugin - Plugin generator command
 
 # VERSION
 
@@ -22,19 +22,15 @@ version 0.04
 
 # DESCRIPTION
 
-[Mojolicious::Command::generate::localplugin](https://metacpan.org/pod/Mojolicious::Command::generate::localplugin) generates directory structures for
+[Mojolicious::Command::Author::generate::localplugin](https://metacpan.org/pod/Mojolicious::Command::Author::generate::localplugin) generates directory structures for
 fully functional [Mojolicious](https://metacpan.org/pod/Mojolicious) plugins.
 
 See ["COMMANDS" in Mojolicious::Commands](https://metacpan.org/pod/Mojolicious::Commands#COMMANDS) for a list of commands that are
 available by default.
 
-# NAME
-
-Mojolicious::Command::generate::localplugin - Plugin generator command
-
 # ATTRIBUTES
 
-[Mojolicious::Command::generate::localplugin](https://metacpan.org/pod/Mojolicious::Command::generate::localplugin) inherits all attributes from
+[Mojolicious::Command::Author::generate::localplugin](https://metacpan.org/pod/Mojolicious::Command::Author::generate::localplugin) inherits all attributes from
 [Mojolicious::Command](https://metacpan.org/pod/Mojolicious::Command) and implements the following new ones.
 
 ## description
@@ -53,7 +49,7 @@ Usage information for this command, used for the help screen.
 
 # METHODS
 
-[Mojolicious::Command::generate::plugin](https://metacpan.org/pod/Mojolicious::Command::generate::plugin) inherits all methods from
+[Mojolicious::Command::Author::generate::plugin](https://metacpan.org/pod/Mojolicious::Command::Author::generate::plugin) inherits all methods from
 [Mojolicious::Command](https://metacpan.org/pod/Mojolicious::Command) and implements the following new ones.
 
 ## run

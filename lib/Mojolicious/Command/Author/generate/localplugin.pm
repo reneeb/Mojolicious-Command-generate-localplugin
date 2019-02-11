@@ -1,4 +1,7 @@
 package Mojolicious::Command::Author::generate::localplugin;
+
+# ABSTRACT: Plugin generator command
+
 use Mojo::Base 'Mojolicious::Command';
 
 use Mojo::Util qw(camelize class_to_path decamelize);
@@ -30,10 +33,6 @@ sub run {
 
 =encoding utf8
 
-=head1 NAME
-
-Mojolicious::Command::generate::localplugin - Plugin generator command
-
 =head1 SYNOPSIS
 
   Usage: APPLICATION generate localplugin [OPTIONS] [NAME]
@@ -46,7 +45,7 @@ Mojolicious::Command::generate::localplugin - Plugin generator command
 
 =head1 DESCRIPTION
 
-L<Mojolicious::Command::generate::localplugin> generates directory structures for
+L<Mojolicious::Command::Author::generate::localplugin> generates directory structures for
 fully functional L<Mojolicious> plugins.
 
 See L<Mojolicious::Commands/"COMMANDS"> for a list of commands that are
@@ -54,7 +53,7 @@ available by default.
 
 =head1 ATTRIBUTES
 
-L<Mojolicious::Command::generate::localplugin> inherits all attributes from
+L<Mojolicious::Command::Author::generate::localplugin> inherits all attributes from
 L<Mojolicious::Command> and implements the following new ones.
 
 =head2 description
@@ -73,7 +72,7 @@ Usage information for this command, used for the help screen.
 
 =head1 METHODS
 
-L<Mojolicious::Command::generate::plugin> inherits all methods from
+L<Mojolicious::Command::Author::generate::plugin> inherits all methods from
 L<Mojolicious::Command> and implements the following new ones.
 
 =head2 run
