@@ -1,6 +1,11 @@
 History for Mojolicious-Command-generate-localplugin
 ====================================================
 
+0.03   2019-02-11 07:13:00
+
+       * remove unneeded code
+       * add tests
+
 0.02   2018-10-25 09:28:00
 
        * Changes for Mojolicious 8
