@@ -1,6 +1,11 @@
 History for Mojolicious-Command-generate-localplugin
 ====================================================
 
+0.05   2019-02-11 08:38:00
+
+       * fix module name in pod
+       * set path of main module in dist.ini
+
 0.04   2019-02-11 07:41:00
 
        * re-release dist as previous run failed

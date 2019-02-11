@@ -8,7 +8,7 @@ Mojolicious::Command::Author::generate::localplugin - Plugin generator command
 
 # VERSION
 
-version 0.04
+version 0.05
 
 # SYNOPSIS
 
