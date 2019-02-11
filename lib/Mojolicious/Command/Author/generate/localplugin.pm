@@ -13,17 +13,15 @@ sub run {
   my ($self, $name) = @_;
   $name ||= 'MyPlugin';
 
-  my $use_hash = Mojolicious->VERSION() >= 8 ? 1 : 0;
-
   # Class
-  my $class = $name =~ /^[a-z]/ ? camelize $name : $name;
-  my $app = class_to_path $class;
-  my @app_params = $use_hash ? ({ class => $class, name => $name }) : ($class, $name);
+  my $class      = $name =~ /^[a-z]/ ? camelize $name : $name;
+  my $app        = class_to_path $class;
+  my @app_params = ({ class => $class, name => $name });
   $self->render_to_rel_file('class', "lib/$app", @app_params);
 
   # Test
-  my $testname = decamelize $class;
-  my @test_params = $use_hash ? ({ name => $name }) : ($name);
+  my $testname    = decamelize $class;
+  my @test_params = ({ name => $name });
   $self->render_to_rel_file('test', "t/$testname.t", @test_params);
 }
 
