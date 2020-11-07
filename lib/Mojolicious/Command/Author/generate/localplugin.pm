@@ -24,7 +24,7 @@ sub run {
 
   # Test
   my $testname    = decamelize $class;
-  my @test_params = ({ name => $name });
+  my @test_params = ({ class => $class, name => $name });
   $self->render_to_rel_file('test', "t/$testname.t", @test_params);
 }
 
@@ -144,7 +144,7 @@ use Test::More;
 use Mojolicious::Lite;
 use Test::Mojo;
 
-plugin '<%= $name %>';
+plugin '<%= $class %>';
 
 get '/' => sub {
   my $c = shift;

@@ -35,7 +35,7 @@ ok -e $plugin->rel_file(
   'class exists';
 ok -e $plugin->rel_file('t/test_plugin.t'), 'test exists';
 
-TODO: { local $TODO = "Should find the Plugin, but doesn't";
+{
   note "Subtest: Run tests for test_plugin";
 
   open my $fh, '-|', $^X => -I, $plugin->rel_file('lib/'),
