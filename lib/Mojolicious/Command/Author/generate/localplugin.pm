@@ -7,7 +7,7 @@ use Mojo::Base 'Mojolicious::Command';
 use Mojo::Util qw(camelize class_to_path decamelize);
 use Mojolicious;
 
-our $VERSION = 0.05;
+our $VERSION = 0.06;
 
 has description => 'Generate Mojolicious plugin directory structure for application';
 has usage => sub { shift->extract_usage };
